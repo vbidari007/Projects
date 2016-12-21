@@ -1,0 +1,11 @@
+
+ Number of instances for Positive class found: 365
+ Positive class example tweet:Bravo to @Trevornoah this was a marvelous interview where he kept calm and made powerful points to win a meaningful… https://t.co/3mQ3kEDNFt
+ Number of instances for Negative class found: 287
+ Negative class example tweet:RT @prxdencedear: fuck kodak black
+fuck brock turner 
+fuck donald trump
+fuck justin barerra 
+FUCK ALL RAPISTS
+ Number of instances for Neutral class found: 348
+ Neutral class example tweet:RT @lastpatriotsusa: #GoTrump https://t.co/kOKexkEr1G

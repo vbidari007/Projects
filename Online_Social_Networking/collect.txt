@@ -1,0 +1,3 @@
+
+ Number of users collected: 1401
+ Number of messages collected: 1000

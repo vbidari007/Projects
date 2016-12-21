@@ -1,0 +1,28 @@
+#!/bin/sh
+
+clear
+#Java Installation
+sudo apt-get update
+sudo apt-add-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+# Ant installation
+#sudo apt-get install ant
+#sudo apt-get update
+# Couch DB
+sudo apt-get install couchdb
+# Mongo DB
+sudo apt-get update
+sudo apt-get install -y mongodb-org-server mongodb-org-shell mongodb-org-tools
+sudo rm /var/lib/dpkg/lock
+sudo apt-get install mongodb
+sudo service mongod start
+sudo apt-get install mongodb-clients
+# Redis DB
+sudo apt-get update
+sudo apt-get install -y python-software-properties
+sudo add-apt-repository -y ppa:rwky/redis
+sudo apt-get update
+sudo apt-get install -y redis-server
+sudo service redis-server restart
+clear

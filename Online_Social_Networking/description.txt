@@ -1,0 +1,30 @@
+collect.py
+
+This file collects data using TwitterAPI. I used 'statuses/filter' to collect 1000 tweets that mentions donald trump. This data will be saved as tweets.pkl in disk using pickle libray.
+'tweets.pkl' will be used in classify.py file.
+This file also collects data of any persson for example 'Donald Trump' data using 'user/loopup' 'friends/ids'. First get friends of donald trump using 'friends/ids' and again get friends of donald trump friends using 'friends/ids'. Save this file as 'users.pkl' using pickle library.
+
+So This file collects data and saves to disk.
+
+cluster.py
+
+This file implemets clustering of 'users.pkl' data. First it creates graph with all users as nodes and friendship between users as edge between nodes. This graph is saved as png file using 
+networkx library. This graph is passed to girvan-newman algorithm to find community within this graph. Giravn newman algorithm return community as size between minimum size and maximum size as mentioned in cluster.py. This file saves community graph in disk as png files.
+
+
+classify.py
+
+This file classifies tweets collected in 'tweets.pkl' using lexicon analysis. This file collects data from AFINN for list of positive and negative words. Then sentiment analysis tokenize each tweet and calculate positive and negative value of each tweet. so it classsifies tweets as positive , negative and neutral class.
+
+
+Conclusion.
+
+1. collect.py
+	Need to handle rate limit exceeded problem while collecting data using TwitterAPI
+
+2. cluster.py
+	cluster found using this file are shows that users in same community are friends to each other. users with less mutual friends are not included in the community.
+
+3. classify
+	classes found using this file are good results but need to handle some slang words which are not in AFINN lists to make resulrs more accurate.
+
